@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 1315)
-Total output lines: 98
-
 # Professional Pre-Installation Audit Methodology
 
 ## 1. Assurance statement
@@ -41,7 +38,24 @@ Model prose is analysis, not evidence. Scanner findings are leads until a review
 ## 5. Required review domains
 
 1. **Instruction integrity** — hidden directives, authority conflicts, prompt injection, audit bypass, self-modification, deceptive claims.
-…315 tokens truncated…Critical | Verified or directly instructed unauthorized secret exfiltration, destructive action, or broad privilege compromise. |
+2. **Tool authority** — shell, filesystem, browser, messaging, finance, cloud, repository, database, MCP, and administrative actions.
+3. **Data and secrets** — credentials, environment variables, session data, user files, clipboard, contacts, private keys, and API tokens.
+4. **External effects** — network destinations, uploads, webhooks, remote configuration, downloads, messages, and deployments.
+5. **Execution and persistence** — scripts, binaries, interpreters, installers, lifecycle hooks, dynamic code, scheduled/background behavior.
+6. **Supply chain** — publisher, immutable revision, dependencies, lockfiles, signatures, build provenance, release assets, and update channels.
+7. **Isolation and governance** — least privilege, consent, data minimization, retention, logging, approvals, rollback, and re-audit.
+
+For every sensitive capability, establish:
+
+`presence → reachability → trigger/controller → required privilege → data → destination → effect → justification → control`
+
+## 6. Severity, confidence, and reachability
+
+Severity measures impact if reachable. Confidence measures evidence strength. Reachability is `confirmed`, `conditional`, `unreachable`, or `unknown`.
+
+| Severity | Threshold |
+| --- | --- |
+| Critical | Verified or directly instructed unauthorized secret exfiltration, destructive action, or broad privilege compromise. |
 | High | Reachable sensitive capability can create material data or system impact without adequate control. |
 | Medium | Elevated or ambiguous capability requires restriction, clarification, or controlled testing. |
 | Low | Limited, justified capability with bounded impact and clear controls. |
