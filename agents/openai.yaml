@@ -1,0 +1,6 @@
+interface:
+  display_name: "Skill Safety Audit"
+  short_description: "Evidence-based checks before skill installation"
+  default_prompt: "Use $skill-safety-audit to statically audit this candidate before installation and give me an evidence-based verdict."
+policy:
+  allow_implicit_invocation: true
