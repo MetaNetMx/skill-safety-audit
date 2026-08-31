@@ -16,6 +16,22 @@ C:\Users\YOUR_USER\.codex\skills\skill-safety-audit\SKILL.md
 
 Open a new Codex/ChatGPT turn after installation. Do not place an unaudited candidate inside the active skills directory; keep it in a separate review folder.
 
+### Install from GitHub on macOS or Linux
+
+```bash
+git clone https://github.com/MetaNetMx/skill-safety-audit.git \
+  ~/.codex/skills/skill-safety-audit
+```
+
+### Install from GitHub on Windows PowerShell
+
+```powershell
+git clone https://github.com/MetaNetMx/skill-safety-audit.git `
+  "$env:USERPROFILE\.codex\skills\skill-safety-audit"
+```
+
+For reproducibility, audit and pin a specific commit rather than permanently trusting the moving `main` branch.
+
 ## Simplest invocation
 
 ```text
